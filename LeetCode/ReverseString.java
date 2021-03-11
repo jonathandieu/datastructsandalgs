@@ -16,14 +16,18 @@ class Solution
         int i = 0;
         int j = s.length;
 
+        
         while (i < j)
         {
+            // swap values at each index
+            char temp = s[i];
             s[i] = s[j];
-            s[j] = s[i];
+            s[j] = temp;
+            
             
             i++;
             j--;
-        
         }
+        System.out.println(s.toString());
     }
 }
