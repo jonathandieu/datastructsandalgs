@@ -1,3 +1,5 @@
+# Function:
+# Error Tolerance: 
 iterations = 0
 root = "placeholder"
 # If the method successfuly finds the root
