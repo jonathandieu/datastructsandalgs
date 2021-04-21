@@ -44,5 +44,5 @@ print("The procedure was succesful.")
 print("The value of the root is :", root)
 
 # If the method fails to find the root
-if (root == None):
+if (iterations > max or root == None):
     print("The method failed after", iterations, "iterations")
