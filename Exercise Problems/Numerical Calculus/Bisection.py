@@ -1,11 +1,14 @@
 # Import the library necessary for math functions
 import math
 
+# This represents our polynomial: x^2 - x^2 + 2
 f = lambda x: x**3 - x**2 + 2
-print(f(1))
+
 iterations = 0
-root = "placeholder"
+
+# The tolerance for the function
 tolerance = 0.01
+
 # First, choose the starting interval where the function at
 # the endpoints is less than 0 and they have differing signs
 left = -200
@@ -16,7 +19,7 @@ max = math.ceil(2 / math.log(2,10))
 print(max)
 max = 16
 
-# Loop that calculates
+# Loop that calculates successive approximations
 while (abs(right - left) > tolerance and iterations < max):
     # Find the midpoint between them
     iterations += 1
@@ -26,14 +29,11 @@ while (abs(right - left) > tolerance and iterations < max):
         right = midpoint
     else:
         left = midpoint
-
-print(midpoint)
-
-
-
+root = "{:.4f}".format(midpoint)
 
 # If the method successfuly finds the root
 print("The procedure was succesful.")
 print("The value of the root is :", root)
+
 # If the method fails to find the root
 print("The method failed after", iterations, "iterations")
