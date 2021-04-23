@@ -36,7 +36,7 @@ while (iterations < max):
             print("The value of the root is :", root)
             break
 
-
+        # If we haven't reached the threshold for success
         iterations += 1
         initial = next
 
