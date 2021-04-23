@@ -10,7 +10,6 @@ f = lambda x: x**3 - x**2 + 2
 # First derivative of f(x):
 first_deriv = lambda x: 3*x**2 - 2*x
 
-
 # Set our root initially to a null value as a placeholder
 root = None
 
@@ -35,7 +34,7 @@ while (iterations < max):
             root = next
             print("The procedure was succesful.")
             print("The value of the root is :", root)
-            exit()
+            break
 
 
         iterations += 1
