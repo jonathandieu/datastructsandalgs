@@ -2,8 +2,8 @@ class fibonacci
 {
     public static void main(String[] args)
     {
-        System.out.println(fibRecurse(10));
-
+        System.out.println(fibRecurse(9));
+        System.out.println(fibMemo(9));
     }
 
     // Naive recursive approach
@@ -13,11 +13,31 @@ class fibonacci
         if (n < 2)
             return n;
         else
-            return fib(n - 1) + n;
+        // Since Fibonacci is defined as the number before plus the last number:
+            return fibRecurse(n - 1) + fibRecurse(n - 2);
     }
 
+    // Memoization approach with recursion
+
+    // Wrapper function
     public static int fibMemo(int n)
     {
+        // Create memo to store recursive calls in
+        int[] memo = new int[n];
+
+        // Calls the private function
+        return fibMemo(n, memo);
+    }
+
+    // Driver function
+    private static int fibMemo(int n, int[] memo)
+    {
+        if (n < 2)
+            return n;
+        else
+            return fibMemo(n - 1, memo) + fibMemo(n - 2, memo);
+
+        // Initialize the memo
 
     }
 
