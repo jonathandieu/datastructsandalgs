@@ -6,7 +6,7 @@ class MinCostStairs
         float total = 0;
         for (int i = 0; i < cost.length; i++)
         {
-            total = cost[i] + 
+            total = cost[i] +
         }
     }
 
