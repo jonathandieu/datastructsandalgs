@@ -3,3 +3,5 @@ def insertionSort1(n, arr):
     for i in range(n):
         # if (arr[n])
         print(i)
+
+# This is to make a loop
