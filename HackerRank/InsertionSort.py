@@ -5,3 +5,4 @@ def insertionSort1(n, arr):
         print(i)
 
 # This is to make a loop
+# Initial thoughts on how to solve the problem: 
