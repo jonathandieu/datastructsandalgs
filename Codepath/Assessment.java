@@ -33,6 +33,26 @@ class Assessment
         return c;
     }
 
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
+
+    public static int sumOfLeftLeaves(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        if (root.left == null && root.right == null) {
+            return root.val;
+        }
+        return sumOfLeftLeaves(root.left) + sumOfLeftLeaves(root.right);
+    }
+
     public static void main(String[] args)
     {
         System.out.println(test1() ? "Test 1: Passed" : "Test 1: Failed");
