@@ -53,6 +53,20 @@ class Assessment
         return sumOfLeftLeaves(root.left) + sumOfLeftLeaves(root.right);
     }
 
+    public static int degreeOfArr(int[] arr) {
+        int[] count = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            count[arr[i]]++;
+        }
+        int max = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (count[i] > max) {
+                max = count[i];
+            }
+        }
+        return max;
+    }
+
     public static void main(String[] args)
     {
         System.out.println(test1() ? "Test 1: Passed" : "Test 1: Failed");
