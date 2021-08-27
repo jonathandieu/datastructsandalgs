@@ -43,6 +43,18 @@ class Assessment
         }
     }
 
+    public void printBinaryTree(TreeNode root)
+    {
+        if (root == null)
+        {
+            return;
+        }
+        printBinaryTree(root.left);
+        System.out.print(root.val + " ");
+        printBinaryTree(root.right);
+    }
+
+
     public static int sumOfLeftLeaves(TreeNode root) {
         if (root == null) {
             return 0;
@@ -65,6 +77,17 @@ class Assessment
             }
         }
         return max;
+    }
+
+    class BinaryTree
+    {
+        private TreeNode root;
+        private int size;
+        private int height;
+        private int maxDepth;
+        private int minDepth;
+        private int[] arr;
+        private int[] arr2;
     }
 
     public static void main(String[] args)
