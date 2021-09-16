@@ -1,0 +1,7 @@
+def reverse_words_order_and_swap_cases(sentence):
+    my_string = ''
+    for i in sentence.split(' '):
+        my_string += i[::-1] + ' '
+    return my_string[:: -1].swapcase()
+
+print(reverse_words_order_and_swap_cases('aWESOME is cODING'))
