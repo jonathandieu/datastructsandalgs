@@ -5,7 +5,10 @@ class Node:
         self.right = right
 
 def tree_to_doubly(root: Node) -> Node:
-    pass
+    # Null check
+    if root == None:
+        head = Node()
+
 
 node = Node(3)
 print(node)
