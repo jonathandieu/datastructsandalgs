@@ -10,3 +10,16 @@
 # Will sorting this array help us? It might make it so that
 # On second thought, sorting the array will destroy the order of the array, which we can't do because we're obligated to take the fruit from a tree no matter what.
 def total_fruit(fruits: list[int]) -> int:
+
+    sorto = (sorted(fruits,key=fruits.count, reverse=True))
+
+    print(sorted(fruits,key=fruits.count, reverse=True))
+    basket1count = fruits.count(sorto[0])
+    print(basket1count)
+    print("this is happening")
+    excluded = [x for x in sorto if x != sorto[0]]
+    print(excluded)
+    basket2count = excluded.count(excluded[0])
+    print(basket2count)
+    help(list.count)
+    return basket1count + basket2count
