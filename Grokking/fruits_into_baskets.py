@@ -9,7 +9,10 @@
 
 # Will sorting this array help us? It might make it so that
 # On second thought, sorting the array will destroy the order of the array, which we can't do because we're obligated to take the fruit from a tree no matter what.
-def total_fruit(fruits: list[int]) -> int:
+from typing import List
+
+
+def total_fruit(fruits: List[int]) -> int:
 
     sorto = (sorted(fruits,key=fruits.count, reverse=True))
 
