@@ -9,6 +9,7 @@
 
 # Will sorting this array help us? It might make it so that
 # On second thought, sorting the array will destroy the order of the array, which we can't do because we're obligated to take the fruit from a tree no matter what.
+# Use a two pointer approach here, the sliding window technique
 from typing import List
 
 
