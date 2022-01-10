@@ -8,4 +8,6 @@ class ListNode:
 
 
 def delete_duplicates(head: Optional[ListNode]):
+
+    # Delete every duplicate node in the linked list
     pass
