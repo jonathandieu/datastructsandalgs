@@ -18,3 +18,8 @@ class Solution(object):
         count += len(stack)
 
         return count
+
+if __name__ == "__main__":
+    x = Solution()
+    x.minAddToMakeValid("yur")
+    exit()
