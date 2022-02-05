@@ -8,6 +8,19 @@ public class powerOfTwoMaxHeap
         this.max = number;
     }
 
+    // Insert Method
+    private static insert()
+    {
+
+    }
+
+    // Pop max method
+    private static popMax()
+    {
+
+    }
+
+    // Node class
     private class heapNode
     {
 
