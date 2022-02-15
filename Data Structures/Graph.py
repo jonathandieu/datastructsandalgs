@@ -17,6 +17,13 @@ def iterative_depth_first_search(graph: Graph, source_node) -> None:
         for neighbor_node in graph.adjacency_list[current]:
             stack.append(neighbor_node)
 
+def recursive_depth_first_search(graph: Graph, source_node) -> None:
+    # Consider the source_node as the current node
+    print(source_node)
+    for neighbor_node in graph.adjacency_list[source_node]:
+        recursive_depth_first_search(graph, neighbor_node)
+
+# Driver Code
 if __name__ == "__main__":
     my_graph = Graph()
     my_graph.adjacency_list = {
@@ -28,4 +35,8 @@ if __name__ == "__main__":
         "f": []
     }
 
-    depth_first_search(my_graph, 'a')
+    print("Iterative DFS: ")
+    iterative_depth_first_search(my_graph, 'a')
+
+    print("Recursive DFS: ")
+    recursive_depth_first_search(my_graph, 'a')
