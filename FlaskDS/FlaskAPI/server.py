@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # Configuration Dictionary
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///sqlitedb.file"
-app.config["SQL_TRACK_MODIFICATIONS"] = 0
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = 0
 
 # Configure sqlite3 to enforce foreign key constraints
 @event.listens_for(Engine, "connect")
