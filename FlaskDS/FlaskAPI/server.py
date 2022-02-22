@@ -6,7 +6,7 @@ from sqlalchemy import event
 from sqlalchemy.engine import Engine
 # from flask_sqlalchemy import SQLAlchemy
 
-# Application
+# Application Main Logic
 app = Flask(__name__)
 
 # Configuration Dictionary
