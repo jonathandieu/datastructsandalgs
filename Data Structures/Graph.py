@@ -1,9 +1,35 @@
+from lib2to3.pgen2.token import NEWLINE
+from operator import ne
+from os import sep
+
+
 class Graph:
     def __init__(self) -> None:
         self.adjacency_list = {}
 
     def print_adj_list(self):
-        print(self.adjacency_list.keys())
+        print(self.adjacency_list)
+        for vertex, edges in self.adjacency_list.items():
+            print(f"vertex: {vertex} has edge(s) to: {self.adjacency_list[vertex]}")
+            if len(edges) == 0:
+                print("This vertex has no edges.")
+
+
+
+    def add_vertex(self, vertex) -> None:
+        """
+        Adds new vertex to the graph
+        """
+        # Only add the vertex if it doesn't already exist in the graph
+        if vertex not in self.adjacency_list:
+            self.adjacency_list[vertex] = []
+        else:
+            print("That vertex already exists.")
+
+    def add_edge(self, vertex1, vertex2, edge_weight=0):
+        if vertex1 in self.adjacency_list and vertex2 in self.adjacency_list:
+            temp = [vertex2, edge_weight] # Python only lets us append one thing at a time, so we need to append the whole list
+            self.adjacency_list[vertex1].append(temp)
 
 
 def iterative_depth_first_search(graph: Graph, source_node) -> None:
@@ -40,3 +66,19 @@ if __name__ == "__main__":
 
     print("Recursive DFS: ")
     recursive_depth_first_search(my_graph, 'a')
+
+    print("Before adding vertex: ")
+    my_graph.print_adj_list()
+
+    my_graph.add_vertex("new_node")
+    print("After adding vertex: ")
+    my_graph.print_adj_list()
+
+    my_graph.add_edge("new_node", "a")
+    print("After adding edge between 'new_node' and 'a':")
+    my_graph.print_adj_list()
+
+
+    my_graph.add_edge("new_node", "b", 6)
+    print("After adding edge between 'new_node' and 'b':")
+    my_graph.print_adj_list()
