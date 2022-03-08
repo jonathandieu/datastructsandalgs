@@ -33,3 +33,6 @@ def total_fruit(fruits: List[int]) -> int:
     current_fruits = 0
     for window_end in len(fruits):
         current_fruits = fruits[window_end]
+
+        current_fruits -= fruits[window_start]
+    return max_fruits
