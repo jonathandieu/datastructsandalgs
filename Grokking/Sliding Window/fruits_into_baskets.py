@@ -14,16 +14,25 @@ from typing import List
 
 
 def total_fruit(fruits: List[int]) -> int:
+    # original attempt from 2 months ago
+    # sorto = (sorted(fruits,key=fruits.count, reverse=True))
 
-    sorto = (sorted(fruits,key=fruits.count, reverse=True))
+    # print(sorted(fruits,key=fruits.count, reverse=True))
+    # basket1count = fruits.count(sorto[0])
+    # print(basket1count)
+    # print("this is happening")
+    # excluded = [x for x in sorto if x != sorto[0]]
+    # print(excluded)
+    # basket2count = excluded.count(excluded[0])
+    # print(basket2count)
+    # help(list.count)
+    # return basket1count + basket2count
 
-    print(sorted(fruits,key=fruits.count, reverse=True))
-    basket1count = fruits.count(sorto[0])
-    print(basket1count)
-    print("this is happening")
-    excluded = [x for x in sorto if x != sorto[0]]
-    print(excluded)
-    basket2count = excluded.count(excluded[0])
-    print(basket2count)
-    help(list.count)
-    return basket1count + basket2count
+    window_start = 0
+    max_fruits = 0
+    current_fruits = 0
+    for window_end in len(fruits):
+        current_fruits = fruits[window_end]
+
+        current_fruits -= fruits[window_start]
+    return max_fruits
