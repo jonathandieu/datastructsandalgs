@@ -14,9 +14,6 @@ def smallest_subarray_with_a_greater_sum(arr: list, S: int):
     #
 
     # For loop to move the window along, end being the index in range()
-
-        # if >= S:
-
     for window_end in range(len(arr)): # 0, 1, 2, 3, 4, 5
         window_sum += arr[window_end] # arr[0] = 7
         window_size += 1
@@ -31,10 +28,6 @@ def smallest_subarray_with_a_greater_sum(arr: list, S: int):
 
 
     return min_size
-
-
-    return 0
-
 
 def smallest_subarray_sum(arr, s):
     min_size = len(arr) + 1 # answer we are returning (initialized to something we'll never reach)
@@ -54,7 +47,6 @@ def smallest_subarray_sum(arr, s):
 
 if __name__=="__main__":
     test_list2 = [7, 1, 5, 2, 3, 2]
-
     test_list1 = [2, 1, 5, 2, 3, 8]
     # print(smallest_subarray_with_a_greater_sum(test_list2, 7), "Expected: 1")
     print("output:", smallest_subarray_with_a_greater_sum(test_list1, 7), "Expected: 1")
