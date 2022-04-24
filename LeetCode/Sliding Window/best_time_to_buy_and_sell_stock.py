@@ -21,6 +21,18 @@ def max_profit(prices: list) -> int:
             max_profit = max(current_profit, max_profit)
     return max_profit
 
+def maxProfitNC(self, prices: List[int]) -> int:
+    l, r = 0, 1
+    maxP = 0
+    while(r < len(prices)):
+        if prices[l] < prices[r]:
+            currentP = prices[r] - prices[l]
+            maxP = max(currentP, maxP)
+        else:
+            l = r
+        r += 1
+    return maxP
+
 # Driver Code
 if __name__ == "__main__":
     prices = [7, 1, 5, 3, 6, 4]
