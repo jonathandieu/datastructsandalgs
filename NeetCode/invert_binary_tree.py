@@ -8,8 +8,10 @@ def invert_binary_tree(root):
     if not root:
         return None
     # Invert the left subtree
-
     # Invert the right subtree
 
 
-    pass
+    # OR
+    if root:
+        root.left, root.right = self.invert_binary_tree(root.right), self.invert_binary_tree(root.left)
+        return root
