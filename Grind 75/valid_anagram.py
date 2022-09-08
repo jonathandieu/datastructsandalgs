@@ -10,4 +10,6 @@ def valid_anagram(s: str, t: str) -> bool:
 			return False
 		else:
 			hashmap[c] -= 1
-	return set(hashmap.values) == set([0])
+	return set(hashmap.values()) == set(list([0]))
+print(valid_anagram("yeet", "yote"))
+print(valid_anagram("tacocat", "tacocta"))
