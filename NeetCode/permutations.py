@@ -1,0 +1,2 @@
+def permutations(nums):
+	pass
