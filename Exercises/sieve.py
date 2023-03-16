@@ -1,4 +1,5 @@
 def sieve(num: int):
+    # keep track of the primes and skip computing numbers we know won't be prime.
     pass
 
 def prime_comprehension(num: int):
