@@ -1,4 +1,7 @@
 def valid_anagram(s, t):
+    """
+    Given two strings, s and t; returns True if they are anagrams of each other, and returns False if they are not.
+    """
     if len(s) != len(t):
                 return False
     letterCount = {}
