@@ -1,4 +1,4 @@
-def valid_anagram(s, t):
+def valid_anagram(s: str, t: str) -> bool:
     """
     Given two strings, s and t; returns True if they are anagrams of each other, and returns False if they are not.
     """
