@@ -1,5 +1,8 @@
 def group_anagrams():
-    letters_to_words = defaultdict(list)
-    for word in strs:
-        letters_to_words[tuple(sorted(word))].append(word)
-    return list(letters_to_words.values())
+    dictionary = {}
+    for string in strs:
+        sorted_string = "".join(sorted(string))
+        if sorted_string not in dictionary:
+            dictionary[sorted_string] = []
+        dictionary[sorted_string].append(string)
+    return [value for value in dictionary.values()]
