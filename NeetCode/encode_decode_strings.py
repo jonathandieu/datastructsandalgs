@@ -3,12 +3,14 @@ class Codec:
         """
         Encodes a list of strings to a single string.
         """
+        pass
 
 
     def decode(self, s: str) -> list[str]:
         """
         Decodes a single string to a list of strings.
         """
+        pass
 
 
 
