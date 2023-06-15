@@ -1,2 +1,2 @@
-def is_palindrome():
+def is_palindrome() -> bool:
     pass
