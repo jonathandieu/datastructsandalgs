@@ -8,4 +8,4 @@ def parse_string(s: str) -> bool:
     """
     Given a string sequence, returns string without whitespaace and punctuation.
     """
-    pass
+    return [char for char in s if char.isalpha()].join()
