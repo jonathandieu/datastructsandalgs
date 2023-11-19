@@ -20,3 +20,6 @@ class LinkedListNode(object):
                     return False
 
                 return True
+        # Time complexity: O(n), where n is the number of nodes in the list. Not optimized.
+
+        # Space complexity: O(n) due to the set keeping track of the nodes in the list.
