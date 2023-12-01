@@ -6,6 +6,7 @@ def permutations(nums: list[int]) -> list[list[int]]:
 	if len(nums) == 1:
 		return [[nums[0]]]
 
+	# Create a list data structure to keep track of our permutations.
 	permutations = []
 
 	return permutations
