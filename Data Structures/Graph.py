@@ -1,8 +1,3 @@
-from lib2to3.pgen2.token import NEWLINE
-from operator import ne
-from os import sep
-
-
 class Graph:
     def __init__(self) -> None:
         self.adjacency_list = {}
